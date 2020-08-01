@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="www.mhsacco.co.zw">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name="profile.profile"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".splash"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".RecyclerActivity"
+            android:launchMode="singleInstance" />
+
+        <service
+            android:name="constants.NotificationService"
+            android:exported="false" />
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="www.mhsacco.co.zw" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".payslipupload"
+            android:launchMode="singleInstance" />
+
+
+        <activity
+            android:name=".detailapplicant"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".employmentdetails"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".variousitems"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ProfileActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".ForgotPassword" />
+        <activity
+            android:name=".confidentials"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".about"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".kusaina"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".applyreasons"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".bankingdetails"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".finishapply"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".proceed"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".changepass"
+            android:launchMode="singleInstance" />
+    </application>
+
+</manifest>
